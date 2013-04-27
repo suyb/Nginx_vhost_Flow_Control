@@ -1,0 +1,2 @@
+0 0 * * * /var/log/admin_nginx/daily_control.sh
+0 0 1 * * /var/log/admin_nginx/month_control.sh
