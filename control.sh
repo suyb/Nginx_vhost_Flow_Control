@@ -19,13 +19,13 @@ echo $var_hostname2_in >/var/log/admin_nginx/hostname2_in.log
 
 if [ "$var_hostname1_in" -ge 31457280 ]
 then 
-        \cp -f /var/log/admin_nginx/conf/hostname1_limit.conf /usr/local/webserver/nginx/conf/vhost/blog.friend8.net.conf
+        \cp -f /var/log/admin_nginx/conf/hostname1_limit.conf /usr/local/webserver/nginx/conf/vhost/hostname1.conf
         kill -hup `cat /usr/local/webserver/nginx/logs/nginx.pid`
 fi
 
 if [ "$var_hostname2_in" -ge 31457280 ]
 then
-        \cp -f /var/log/admin_nginx/conf/hostname2_limit.conf /usr/local/webserver/nginx/conf/vhost/bbs.veikin.com.conf
+        \cp -f /var/log/admin_nginx/conf/hostname2_limit.conf /usr/local/webserver/nginx/conf/vhost/hostname2.conf
         kill -hup `cat /usr/local/webserver/nginx/logs/nginx.pid`
 fi
 echo "------control.sh  is ok.  $(date +%F) $(date +%X------)" >> /var/log/admin_nginx/report.log
