@@ -1,5 +1,6 @@
 #!/bin/bash
 #You must install webalizer.
+#just test.
 
 to_path='/var/log/admin_nginx/logs'
 bin_path='/usr/local/webserver/webalizer/bin'
